@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Carousel CrossFade</title>
+<style type="text/css">
+#wrapper {
+	margin:0 auto;
+	width:980px;
+	font-family:"Trebuchet MS", helvetica, sans-serif;
+}
+.slideshow {
+	width:950px;
+	height:480px;
+	box-shadow:2px 2px 10px #000;
+	float:left;
+	margin:10px;
+	background:#DDF;
+}
+.slideshow span {
+	width:100%;
+	float:left;
+	text-align:center;
+	font-size:48px;
+	font-weight:bold;
+	line-height:400px;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="CarouselCrossFade.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.slideshow').carouselCrossFade();
+})
+</script>
+</head>
+<body>
+<section id="wrapper">
+<h1>Carousel Crossfade</h1>
+<section class="slideshow">
+	<div >
+		<span>Slide 1</span>
+	</div>
+	<div >
+		<span>Slide 2</span>
+	</div>
+	<div >
+		<span>Slide 3</span>
+	</div>
+	<div>
+		<span>Slide 4</span>
+	</div>
+</section>
+	
+	<p>This is a Carousel Plugin that allows you to scroll through not just pictures but anything!</p>
+	<p>You only need to perform two steps to begin using it. first include the CarouselCrossFade.js file somewhere on your page. or inside another js file.  </p>
+	<pre>
+&lt;script type="text/javascript" src="CarouselCrossFade.js"&gt;&lt;/script&gt;
+	</pre>
+	<p>
+	then call the tooltip funciton from your desired selector.
+	</p>
+	<pre>
+$(document).ready(function() {
+	$('.slideshow').carouselCrossFade();
+})
+	</pre>
+	<p>
+	right now there are there options that you can change.
+	<ul>
+		<li>the border of the slideshow</li>
+		<li>interval between slides</li>
+	</ul>
+	To do that you just add the attributes like this. 
+	</p>
+		<pre>
+$(document).ready(function() {
+	$('.slideshow').carouselCrossFade({'delay' : '3000', 'border' : '#000 2px solid'});
+})
+	</pre>
+	<p>
+		In the next verson you will be able to control things like animation speed, the type of animation. and many more options. 
+	</p>
+</section>
+</body>
+</html>
